@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Kambal I Reviews</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap" rel="stylesheet">
+        
+		<!-- Font Awesome Icon Library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <style>	
+            @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Outfit:wght@100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: "Outfit", serif;
+            }
+			body {
+				overflow-x: hidden;
+			}
+                    /* Banner Section Styles starts */
+            header {
+                padding: 20px;
+            }
+            header h1 {
+                text-align: center;
+                font-size: 4vh;
+                padding: 25px;
+                background-color: rgba(255, 255, 255, 0.7);
+            }	 
+                    
+                   /* Navigation Bar Section Styles starts */
+			nav {
+				display: flex !important;
+				justify-content: space-between !important;
+				align-items: center !important;
+				padding: 5px 10%;
+				background-color: #222;
+				width: 100%;
+				position: sticky;
+				top: 0;
+				z-index: 1000; /* Ensure navbar is on top of other elements */
+			}
+			.logo {
+				cursor: pointer;
+				font-size: 25px;
+				margin: 1%;
+				width: 100px;
+				height: 40px;
+				margin-top: 10px;
+				margin-bottom: 10px;    
+			}
+			.logo:hover {
+				transform: scale(1.1);
+				transition: transform 0.3s ease-in-out;
+			}
+			.navLinks {
+				list-style: none;
+			}
+			li, a {
+				font-size: 15px;
+				text-decoration: none;
+				color: white;
+				margin-top: 2%;
+			}
+			.navLinks li {
+				display: inline-block;
+				position: relative; /* Added for dropdown positioning */
+			}
+			.navLinks li a {
+				padding: 0px 9px;
+				transition: all 0.3s ease 0s;
+			}
+			.navLinks li a:hover {
+				color: black;
+				padding: 5px 13px;
+				border-radius: 50px;
+				background-color: #950606;
+				text-decoration: none;
+			}
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				background-color: #f9f9f9;
+				box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+				z-index: 10;
+				border-radius: 5%;
+				padding: 10px;
+				white-space: nowrap; /* Ensures text stays in one line */
+				width: auto; /* Auto-adjust width based on content */
+				min-width: 160px; /* Prevents it from being too small */
+			}
+			.navLinks li:hover .dropdown-content {
+				display: block; /* Show dropdown on hover */
+			}
+
+            /* Home Section Styles starts */
+		
+			.home-section {
+				background-color: #f3f2ed;
+				color: #ffffff; 
+				padding: 12% 0;
+				text-align: center;
+				height: 60%;
+				display: flex; /* Use flexbox to center the content vertically */
+				justify-content: center; /* Center horizontally */
+				align-items: center; /* Center vertically */
+				align-items: center; 
+				flex-direction: column;
+			}     
+			.home-section .row{
+				margin: 20px;
+			}
+			.home-section h2 {
+				font-size: 5vh; 
+				margin-bottom: 20px;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for emphasis */
+				font-weight: bold;
+				margin: 20px;
+			}     
+			.home-section p {
+				font-weight: bold;
+				margin: 20px;
+				max-width: 900px;
+				align-items: center;
+			}  
+			
+			/* Review Section Styles starts */
+			.review{
+				margin: 60px;
+				padding: 10px;
+			}
+			.review .heading{
+				font-size: 30px;
+				font-weight: bold;
+			}
+			.review p{
+				font-size: 20px;
+			}
+			.review .row{
+				width: 94%;
+				margin: 0 auto;
+			}
+			.review .fa {
+				font-size: 25px;
+			}
+			.review .checked {
+				color: orange;
+			}
+			/* Three column layout */
+			.review .side {
+				float: left;
+				left: 0;
+				width: 15%;
+				margin-top:5Spx;
+			}
+			.review .middle {
+				margin-top:5px;
+				float: left;
+				width: 70%;
+			}
+			/* Place text to the right */
+			.review .right {
+				text-align: right
+			}
+
+			/* Clear floats after the columns */
+			.review .row:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			/* The bar container */
+			.review .bar-container {
+				width: 100%;
+				background-color: #f1f1f1;
+				text-align: center;
+				color: white;
+				border-radius: 5px;
+			}
+			/* Individual bars */
+			.review .bar-5 {width: 95%; height: 18px; background-color: #B1C6BA;border-radius: 5px;}
+			.review .bar-4 {width: 5%; height: 18px; background-color: #B2DBE9;border-radius: 5px;}
+			.review .bar-3 {width: 3%; height: 18px; background-color: #A8D1D1;border-radius: 5px;}
+			.review .bar-2 {width: 1%; height: 18px; background-color: #FFA468;border-radius: 5px;}
+			.review .bar-1 {width: 0.1%; height: 18px; background-color: #FD8A8A;border-radius: 5px;}
+
+			/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+			@media (max-width: 400px) {
+				.review .side,.review .middle {
+					width: 100%;
+				}
+				.review .right {
+					display: none;
+				}
+			}
+	
+			/* Testimonials Section Styles starts */
+			:root {
+				--primary-color: #950606;
+				--secondary-color: #e8e8e8;
+				--text-dark: #0f172a;
+				--text-light: #94a3b8;
+				--white: #ffffff;
+			}
+		
+			.section__container {
+				max-width: 90%;
+				margin: auto;
+				padding: 2rem 1rem;
+				text-align: center;
+			}
+			.section__container h2 {
+				font-size: 32px;
+				font-weight: 600;
+				color: var(--primary-color);
+			}
+			.section__container h1 {
+				position: relative;
+				margin-bottom: 2rem;
+				font-size: 40px;
+				font-weight: 600;
+				color: var(--text-dark);
+			}
+			.section__container h1::after {
+				position: absolute;
+				content: "";
+				left: 50%;
+				bottom: 0;
+				transform: translateX(-50%);
+				height: 2px;
+				width: 5rem;
+				background-color: var(--primary-color);
+			}
+			.section__grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2rem;
+			}
+			@media(max-width: 800px){
+				.section__grid {
+					display: grid;
+					grid-template-columns: repeat(1, 1fr);
+					gap: 2rem;
+				}
+			}
+			.section__card {
+				position: relative;
+				isolation: isolate;
+				overflow: hidden;
+				padding: 5rem 2rem 2rem;
+				background-color: var(--white);
+				border-radius: 5px;
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+				transition: 0.3s;
+			}
+			.section__card::before {
+				position: absolute;
+				content: "";
+				top: 0;
+				left: 0;
+				transform: translate(-50%, -50%);
+				width: 75%;
+				aspect-ratio: 1;
+				border-radius: 100%;
+				background-color: var(--primary-color);
+				z-index: -1;
+				transition: 0.5s;
+			}
+			.section__card h4 {
+				margin-top: 4rem;
+				margin-bottom: 1rem;
+				font-size: 20px;
+				font-weight: 600;
+				color: var(--primary-color);
+				transition: 0.3s;
+			}
+			.section__card p {
+				margin-bottom: 2rem;
+				color: var(--text-light);
+				transition: 0.3s;
+				font-size: 15px;
+			}
+			.section__card img {
+				margin-bottom: 1rem;
+				max-width: 100px;
+				border-radius: 100%;
+				border: 2px solid var(--primary-color);
+				transition: 0.3s;
+			}
+			.section__card h5 {
+				font-size: 17px;
+				font-weight: 600;
+				color: var(--primary-color);
+				transition: 0.3s;
+			}
+			.section__card:hover::before {
+				width: 400%;
+			}
+			.section__card:hover :is(h4, h5) {
+				color: var(--white);
+			}
+			.section__card:hover img {
+				border-color: var(--white);
+			}
+			.checked {
+				color: orange;
+				white-space: nowrap;
+				float: bottom;
+				font-size: 20px;
+			}
+			.unchecked{
+				white-space: nowrap;
+				float: bottom;
+				font-size: 20px;
+			}
+			
+			/* MoreRatings Section Styles starts */
+			
+			.moreRatings{
+				margin: 30px;
+			}
+			.moreRatings .container {
+				background-color: #fff;
+				border-radius: 5px;
+				padding: 16px;
+				margin: 16px 0;
+				box-shadow: 5px 5px 14px rgba(0, 0.4, 0, 0.4);
+				transition: 0.4s;
+			}
+			.moreRatings .container:hover {
+				border-radius: 5px;
+				padding: 16px;
+				margin: 16px 0;
+				box-shadow: 5px 5px 14px #950606;
+			}
+
+			.moreRatings .container::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+
+			.moreRatings .container img {
+				float: left;
+				margin: 20px;
+				border-radius: 50%;
+				width: 100%;
+				height: 100px;
+			}
+			.moreRatings h2{
+				position: relative;
+				margin-bottom: 2rem;
+				font-size: 40px;
+				font-weight: 600;
+				color: black;
+				text-align: center;
+			}
+			.moreRatings p{
+				font-size: 15px;
+			}
+
+			@media (max-width: 670px) {
+				.moreRatings .container {
+					text-align: center;
+				}
+				.moreRatings .container img {
+					margin: auto;
+					float: none;
+					display: block;
+				}
+			}
+
+			/* Footer Section Styles starts */
+
+			.footer {
+				background-color: #24262b;
+				padding: 70px 0;
+				width: 100%;
+				justify-content: space-between;
+				padding: 80px;
+				border-radius: 10% 0 0 0;
+				color: white;
+			}
+			.footer ion-icon {
+				color: white;
+				font-size: 20px;
+				vertical-align: middle;
+			}
+			.container {
+				width: 100%;
+				margin: auto;
+				max-width: 100%;
+			}
+			.row {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				text-align: left;
+			}
+			.footer-col {
+				width: 30%;
+				padding: 0 15px;
+			}
+			.footer-col h2 {
+				font-size: 18px;
+				color: #ffffff;
+				text-transform: capitalize;
+				margin-bottom: 35px;
+				font-weight: 500;
+				position: relative;
+			}
+			.footer-col h2::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -10px;
+				background-color: #e91e63;
+				height: 2px;
+				width: 50px;
+			}
+			.footer-col ul {
+				padding: 0;
+				list-style: none;
+			}
+			.footer-col ul li {
+				display: block;
+				margin-bottom: 5px;
+				text-align: justify;
+			}
+			.footer-col ul li a {
+				font-size: 15px;
+				text-decoration: none;
+				color: white;
+				transition: all 0.3s ease;
+			}
+			.footer-col ul li a:hover {
+				color: #e91e63;
+			}
+			.footer-col .author {
+				white-space: nowrap;
+			}
+			
+			/* Responsive */
+			@media(max-width: 767px){
+				.footer-col{
+					width: 50%;
+					margin-bottom: 30px;
+				}
+			}
+			@media(max-width: 574px){
+				.footer-col{
+					width: 100%;
+				}
+			}
+            .footer ion-icon{
+                color: white;
+                font-size: 20px;
+                align-items: center;
+                justify-content: center;			
+            }
+
+    </style>
+
+    <body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+        
+        <!-- header section starts -->
+        <header style="background-image: url('https://mapua.sgp1.cdn.digitaloceanspaces.com/cms_images/O7AFenu16K6m09rjtoVPsCDK1GLlQdDvgCoF4Ow1.webp'); background-position: center; background-repeat: no-repeat; background-size: cover">
+            <h1 style="letter-spacing: 20px; font-weight:bold">THE  KAMBAL</h1>
+        </header>
+        
+        <nav>
+            <img src="images/thekambal_logo.png" class="logo" alt="The Kambal Logo">
+            <ul class="navLinks">
+                <li><a href="index.html">Home</a> | </li>
+                <li>
+                    <div class="dropdown">
+                        <span>&nbsp; Collections &nbsp; |</span>  
+                        <div class="dropdown-content">
+                            <p><a href="page2.html" style="color:black; margin: 5%;">Mapua Centennial Collections &nbsp;&nbsp;</a></p>
+                            <p><a href="page3.html" style="color:black; margin: 5%;">Mapua University Lanyards</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="page4.html">Reviews</a> | </li>
+                <li><a href="page5.html">Collaborations</a> | </li>       
+                <li><a href="page6.html">Order Now</a> | </li>              
+                <li><a href="page7.html">FAQs</a></li>
+            </ul>
+        </nav>
+        <br><br> 
+        <!--header section ends -->
+		
+		<!-------- Reviews section starts -------->
+		
+		<section class="review">
+			<span class="heading">User Rating</span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			
+			<p>4.5 average based on 412 reviews.</p>
+			<hr style="border:3px solid #f1f1f1">
+
+			<div class="row">
+				<div class="side">
+					<p>5 star</p>
+				</div>
+					<div class="middle">
+						<div class="bar-container">
+							<div class="bar-5"></div>
+						</div>
+					</div>
+					<div class="side right">
+						<p>356</p>
+					</div>
+				<div class="side">
+					<p>4 star</p>
+				</div>
+					<div class="middle">
+						<div class="bar-container">
+							<div class="bar-4"></div>
+						</div>
+					</div>
+					<div class="side right">
+						<p>35</p>
+					</div>
+				<div class="side">
+					<p>3 star</p>
+				</div>
+					<div class="middle">
+						<div class="bar-container">
+							<div class="bar-3"></div>
+						</div>
+					</div>
+					<div class="side right">
+						<p>18</p>
+					</div>
+				<div class="side">
+					<p>2 star</p>
+				</div>
+					<div class="middle">
+						<div class="bar-container">
+							<div class="bar-2"></div>
+						</div>
+					</div>
+					<div class="side right">
+						<p>2</p>
+					</div>
+				<div class="side">
+					<p>1 star</p>
+				</div>
+					<div class="middle">
+						<div class="bar-container">
+							<div class="bar-1"></div>
+						</div>
+					</div>
+					<div class="side right">
+						<p>0</p>
+					</div>
+			</div>
+		</section>
+		
+		<!-------- Reviews section ends -------->
+		
+		<!-------- Testimonials section starts -------->
+			
+			<section class="section__container">
+				<h2>Testimonials</h2>
+				<h1>What our customers say</h1>
+				<div class="section__grid">
+					<div class="section__card">
+						<span style="position: absolute; top: 0; left: 0; padding: 1rem; font-size: 5rem; color: var(--white);"><i class="ri-double-quotes-l"></i></span>
+						<h4>Love the simplicity</h4>
+						<h6>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						</h6>
+						<p>
+						Finally, a shop that sells lanyards specifically for Mapúans! I got the 1-inch design with my program on it, and it looks super clean and professional. The quality is great, and the print doesn't fade easily. Definitely a must-have for students who want to rep their program with pride!
+						</p>
+						<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e93182b7-4f97-4354-a6b1-280123331de4/deaqi3v-7853d22b-4f2b-43a6-b3bf-4370acce6565.jpg/v1/fill/w_719,h_717,q_75,strp/simple_pfp_example_by_grungedollart_deaqi3v-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzE3IiwicGF0aCI6IlwvZlwvZTkzMTgyYjctNGY5Ny00MzU0LWE2YjEtMjgwMTIzMzMxZGU0XC9kZWFxaTN2LTc4NTNkMjJiLTRmMmItNDNhNi1iM2JmLTQzNzBhY2NlNjU2NS5qcGciLCJ3aWR0aCI6Ijw9NzE5In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oOeZ3OSXWkoMCZRCZwqHcuEg0eU_kz9EYpfPaCgc0a4" alt="user" />
+						<h5>Allan Collins</h5>
+						
+					</div>
+					<div class="section__card">
+						<span style="position: absolute; top: 0; left: 0; padding: 1rem; font-size: 5rem; color: var(--white);"><i class="ri-double-quotes-l"></i></span>
+						<h4>Excellent Designs</h4>
+						<h6>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						</h6>
+						<p>
+						The 0.5-inch lanyard is perfect for those who prefer a more minimal look. The design is crisp, and the clip is sturdy. I love that they have different program options, making it more personal. Worth every peso!
+						</p>
+						<img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/VInfinite017/phpo1DxRH.jpeg" alt="user" />
+						<h5>Tanya Grant</h5>
+						
+					</div>
+					<div class="section__card">
+						<span style="position: absolute; top: 0; left: 0; padding: 1rem; font-size: 5rem; color: var(--white);"><i class="ri-double-quotes-l"></i></span>
+						<h4>Efficient and Reliable</h4>
+						<h6>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						</h6>
+						<p>
+						Great lanyards with unique designs for every program! I got the 1-inch version, and it's comfortable to wear. The only reason I'm giving 4 stars is that I wish they had more color variations. But overall, it's a solid buy!
+						</p>
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwPE8lMUNDVI2lpePpmlBkaoDX0rmqrLWaVA&s" alt="user" />
+						<h5>Clay Washington</h5>
+						
+					</div>
+				</div>
+			</section>
+		
+		<!-------- Testimonials section ends -------->
+		<br/><br/><br/>
+        
+		<!-------- MoreRatings section starts -------->
+		
+		<section class="moreRatings">
+		<h2>More Reviews</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="container">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-V8VOUatUWllZ_wAJe6KrXZ8WN5DYfnIhGA&s" alt="Avatar" style="width:90px">
+						<p><span>Megan Bata</span></p>
+						<p style="margin: 0; font-size: 10px; margin: 10px;">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						</p>
+						<p>Absolutely love my Mapúa lanyard! The quality is top-notch, and I appreciate that they even have program-specific designs. This edition is a must-have!</p>
+					</div>
+
+					<div class="container">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIx2XwDDAz8hT0MIht8hwZwnsxGatlwoVsg&s" alt="Avatar" style="width:90px">
+						<p><span>Michael Manalo</span></p>
+						<p style="margin: 0; font-size: 10px; margin: 10px;">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						</p>
+						<p>Bought a lanyard with my program name, and it looks really amazing! Durable, stylish, and a great way to show school pride. Will definitely buy again!</p>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="container">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfr97cJFfBuXjoW9efWLwo7QghLfuSMdGk0g&s" alt="Avatar" style="width:90px">
+						<p><span>Maris Jenn</span></p>
+						<p style="margin: 0; font-size: 10px; margin: 10px;">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						</p>
+						<p>Finally found a lanyard with my program name! The print is clear, and the design stands out. Great way to represent my course at Mapúa!</p>
+					</div>
+
+					<div class="container">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsSLpZxbc2gP-HnvBsqNjHmMXudIn_2Mfxdw&s" alt="Avatar" style="width:90px">
+						<p><span>Stephen Son</span></p>
+						<p style="margin: 0; font-size: 10px; margin: 10px;">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star unchecked"></span>
+						</p>
+						<p>If you're looking for a Mapúa lanyard, this is the place! The Centennial edition is a special touch, and the material feels premium. Highly recommended!</p>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="container">
+						<img src="https://tr.rbxcdn.com/180DAY-d2aa8b558f4c73dc77ab184210a56788/420/420/Hat/Png/noFilter" alt="Avatar" style="width:90px">
+						<p><span>Taylor Brown</span></p>
+						<p style="margin: 0; font-size: 10px; margin: 10px;">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						</p>
+						<p>Loved their special release for Mapúa’s Centennial! The design is sleek, and the quality is excellent. It is such a great souvenir for any Mapúan!</p>
+					</div>
+
+					<div class="container">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOtKkMZWwVcWw8lEbNn93H8domB89SDK6Qdg&s" alt="Avatar" style="width:90px">
+						<p><span>James Norrington</span></p>
+						<p style="margin: 0; font-size: 10px; margin: 10px;">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star unchecked"></span>
+							<span class="fa fa-star unchecked"></span>
+						</p>
+						<p>I love the durability of the lanyard, and the program-specific designs are a nice touch. However, I wish they had more color variations or customizable options.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-------- MoreRatings section ends -------->
+		<br/><br/><br/><br/><br/><br/>
+        <!-- Footer section starts -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h2>Kambal</h2>
+                    <ul>
+                        <li>Show off your Mapúan pride with our exclusive lanyards and shirts, designed especially for students who live and breathe the cardinal and gold spirit. Whether you're repping your department or just want a piece of Mapúa to carry with you, our high-quality merch lets you wear your identity with pride.</li>
+                        <li>Made by a fellow Mapúan, for Mapúans—because tradition, excellence, and style go hand in hand. #DugoMapúa</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li><ion-icon name="call"></ion-icon>&nbsp; +63 9664859899</li>
+                        <li><ion-icon name="mail"></ion-icon>&nbsp; thekambal2024@gmail.com</li>
+                        <li><ion-icon name="logo-facebook"></ion-icon>&nbsp; <a href="https://www.facebook.com/">KAMBAL</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2>Website Authors</h2>
+                    <ul class="author">
+                        <li>ITS121P - AM12</li>
+                        <li>Aspiras, Naisah</li>
+                        <li>Chavez, Neil Gabriel</li>
+                        <li>Ruanes, Alexa Jena</li>
+                        <li>Panganiban, Andrea Loraine</li>
+                        <li>Perez, Jessica Biel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align:center; font-size: 1.3vh">
+            Copyright &copy; 2025 | Mapua University 1st Yr SY. 2024-2025
+        </p>
+    </footer>
+    <!-- Footer section ends -->
+        
+    </body>
+</html>

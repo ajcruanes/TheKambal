@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapúa Vroom Vroom Shirt Preview</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Outfit:wght@100..900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Outfit", serif;
+        }
+
+        /* Full Height Layout Fix */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            position: relative;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 4vh;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Navigation Bar Section Styles starts */
+        nav {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding: 5px 10%;
+            background-color: #222;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensure navbar is on top of other elements */
+        }
+        .logo {
+            cursor: pointer;
+            font-size: 25px;
+            margin: 1%;
+            width: 100px;
+            height: 40px;
+            margin-top: 10px;
+            margin-bottom: 10px;    
+        }
+        .logo:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .navLinks {
+            list-style: none;
+        }
+        li, a {
+            font-size: 15px;
+            text-decoration: none;
+            color: white;
+            margin-top: 2%;
+        }
+        .navLinks li {
+            display: inline-block;
+            position: relative; /* Added for dropdown positioning */
+        }
+        .navLinks li a {
+            padding: 0px 9px;
+            transition: all 0.3s ease 0s;
+        }
+        .navLinks li a:hover {
+            color: black;
+            padding: 5px 13px;
+            border-radius: 50px;
+            background-color: #950606;
+            text-decoration: none;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            border-radius: 5%;
+            padding: 10px;
+            white-space: nowrap; /* Ensures text stays in one line */
+            width: auto; /* Auto-adjust width based on content */
+            min-width: 160px; /* Prevents it from being too small */
+        }
+        .navLinks li:hover .dropdown-content {
+            display: block; /* Show dropdown on hover */
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+					
+        /* Fixed content on the left */
+        .left-content {
+            width: 20%;
+            background: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-y: auto; 
+            gap: 10px;
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+        }
+
+        .left-content::-webkit-scrollbar {
+            display: none; 
+        }
+
+        .left-content h1, .left-content h2{
+            font-family: "Unna", serif;
+            text-align: center;
+            font-size: 30px;
+            font-weight:bold;
+            color: rgba(128, 0, 0, 0.75)
+        }
+
+        /* Scrollable image container */
+        .scroll-container {
+            width: 60%;
+            height: 100vh;
+            overflow-y: scroll; 
+            scroll-snap-type: y mandatory;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Image Wrapper */
+        .image-wrapper {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+        }
+
+        /* Images */
+        .image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; 
+            border-radius: 0; 
+            box-shadow: none; 
+        }
+
+        /* Hide checkboxes */
+        input[type="checkbox"] {
+                    display: none;
+                }
+
+        /* Style for the normal images */
+        .thumbnail {
+            width: 200px; 
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        /* Fullscreen overlay */
+        .fullscreen-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        /* Show overlay when checkbox is checked */
+        #fullscreen-toggle1:checked ~ #overlay1,
+        #fullscreen-toggle2:checked ~ #overlay2 {
+            display: flex;
+        }
+
+        .fullscreen-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 5px;
+        }
+
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .right-content img {
+            width: 250px;
+            height: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .right-content .price_tag {
+            width: 200px;
+            height: 90px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .right-content h1 {
+            font-size: 30px;
+            font-weight:bold;
+            text-decoration: underline;
+            color: rgba(128, 0, 0, 0.75)
+        }
+
+        .right-content h2 {
+            font-size: 20px;
+            font-weight:bold;
+            color: #bc1823;
+        }
+
+        .button {
+            background-color: #333; 
+            border: 2px solid #333; 
+            color: white;
+            padding: 12px 80px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: transparent; 
+            color: black; 
+            border: 2px solid #333; 
+        }
+
+        .button:active {
+            transform: scale(0.98); 
+        }
+        
+            /* Footer Section Styles starts */
+
+            .footer {
+                background-color: #24262b;
+                padding: 70px 0;
+                width: 100%;
+                justify-content: space-between;
+                padding: 80px;
+                border-radius: 10% 0 0 0;
+                color: white;
+            }
+            .footer ion-icon {
+                color: white;
+                font-size: 20px;
+                vertical-align: middle;
+            }
+            .container {
+                width: 100%;
+                margin: auto;
+                max-width: 100%;
+            }
+            .row {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                text-align: left;
+            }
+            .footer-col {
+                width: 30%;
+                padding: 0 15px;
+            }
+            .footer-col h2 {
+                font-size: 18px;
+                color: #ffffff;
+                text-transform: capitalize;
+                margin-bottom: 35px;
+                font-weight: 500;
+                position: relative;
+            }
+            .footer-col h2::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                background-color: #e91e63;
+                height: 2px;
+                width: 50px;
+            }
+            .footer-col ul {
+                padding: 0;
+                list-style: none;
+            }
+            .footer-col ul li {
+                display: block;
+                margin-bottom: 5px;
+                text-align: justify;
+            }
+            .footer-col ul li a {
+                font-size: 15px;
+                text-decoration: none;
+                color: white;
+                transition: all 0.3s ease;
+            }
+            .footer-col ul li a:hover {
+                color: #e91e63;
+            }
+            .footer-col .author {
+                white-space: nowrap;
+            }
+            
+            /* Responsive */
+            @media(max-width: 767px){
+                .footer-col{
+                    width: 50%;
+                    margin-bottom: 30px;
+                }
+            }
+            @media(max-width: 574px){
+                .footer-col{
+                    width: 100%;
+                }
+            }
+            p {
+                text-align: center;
+                font-size: 1.3vh;
+                margin-top: 30px;
+            }
+            .footer ion-icon{
+                color: white;
+                font-size: 20px;
+                align-items: center;
+                justify-content: center;			
+            }
+    </style>
+</head>
+<body>
+    <!--header section starts -->
+    <header style="background-image: url('https://mapua.sgp1.cdn.digitaloceanspaces.com/cms_images/O7AFenu16K6m09rjtoVPsCDK1GLlQdDvgCoF4Ow1.webp'); background-position: center; background-repeat: no-repeat; background-size: cover">
+        <h1 style="letter-spacing: 20px; font-weight:bold">THE  KAMBAL</h1>
+    </header>
+    
+    <nav>
+        <img src="images/thekambal_logo.png" class="logo" alt="The Kambal Logo">
+        <ul class="navLinks">
+            <li><a href="index.html">Home</a> | </li>
+            <li>
+                <div class="dropdown">
+                    <span>&nbsp; Collections &nbsp; |</span>  
+                    <div class="dropdown-content">
+                        <p><a href="page2.html" style="color:black; margin: 5%;">Mapua Centennial Collections &nbsp;&nbsp;</a></p>
+                        <p><a href="page3.html" style="color:black; margin: 5%;">Mapua University Lanyards</a></p>
+                    </div>
+                </div>
+            </li>
+            <li><a href="page4.html">Reviews</a> | </li>
+            <li><a href="page5.html">Collaborations</a> | </li>       
+            <li><a href="page6.html">Order Now</a> | </li>              
+            <li><a href="page7.html">FAQs</a></li>
+        </ul>
+    </nav>
+    <br><br> 
+    <!-- header section ends -->
+
+    <main>
+    <div class="left-content" style="background: white;">
+
+    <!-- Hidden Checkboxes -->
+    <input type="checkbox" id="fullscreen-toggle1">
+    <input type="checkbox" id="fullscreen-toggle2">
+
+        <!-- Image Thumbnail (clicking it checks the checkbox) -->
+        <br><br><br><br><br><br><br>
+        <h1>Poster</h1>
+        <label for="fullscreen-toggle1">
+            <img src="images/racer_shirt_poster.png" alt="Mapúa Vroom Vroom Shirt Poster" class="thumbnail">
+        </label>
+        
+        <br><br><br><br><br><br><br><br><br><br>
+        <h2>Sizes</h2>
+        <label for="fullscreen-toggle2">
+            <img src="images/shirt_size_table.png" alt="Shirts Size Table" class="thumbnail">
+        </label>
+
+        <!-- Fullscreen Image Overlay (visible when checkbox is checked) -->
+        <div class="fullscreen-overlay" id="overlay1">
+            <label for="fullscreen-toggle1" class="close-btn">✖</label>
+            <img src="images/racer_shirt_poster.png" alt="Fullscreen Image of Mapúa Vroom Vroom Shirt">
+        </div>
+        
+        <div class="fullscreen-overlay" id="overlay2">
+            <label for="fullscreen-toggle2" class="close-btn">✖</label>
+            <img src="images/shirt_size_table.png" alt="Fullscreen Image of Size Table">
+        </div>
+    </div>
+
+    <!-- Scrollable Image Container -->
+    <div class="scroll-container">
+        <div class="image-wrapper">
+            <img src="images/racer_shirt_preview.png" alt="Mapúa Vroom Vroom Shirt Preview">
+        </div>
+        <div class="image-wrapper">
+            <img src="images/racer_shirt_1.png" alt="Mapúa Vroom Vroom Shirt Front">
+        </div>
+        <div class="image-wrapper">
+            <img src="images/racer_shirt_2.png" alt="Mapúa Vroom Vroom Shirt Back">
+        </div>
+    </div>
+
+    <!-- Fixed Content on the Right -->
+    <div class="right-content">
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <img src="images/logo_collab.png" alt="Logo Collab">
+        <br><br><br><br>
+        <h1>Mapúa Vroom</h1>
+        <h1>Vroom Shirt</h1>
+        <br><br>
+        <h2>Price starts at</h2>
+        <img src="images/price_tag.png" alt="Price Tag" class="price_tag">
+        <br><br><br><br>
+        
+    </div>
+</main>
+
+        <!-- Footer section starts -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h2>Kambal</h2>
+                    <ul>
+                        <li>Show off your Mapúan pride with our exclusive lanyards and shirts, designed especially for students who live and breathe the cardinal and gold spirit. Whether you're repping your department or just want a piece of Mapúa to carry with you, our high-quality merch lets you wear your identity with pride.</li>
+                        <li>Made by a fellow Mapúan, for Mapúans—because tradition, excellence, and style go hand in hand. #DugoMapúa</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li><ion-icon name="call"></ion-icon>&nbsp; +63 9664859899</li>
+                        <li><ion-icon name="mail"></ion-icon>&nbsp; thekambal2024@gmail.com</li>
+                        <li><ion-icon name="logo-facebook"></ion-icon>&nbsp; <a href="https://www.facebook.com/">KAMBAL</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2>Website Authors</h2>
+                    <ul class="author">
+                        <li>ITS121P - AM12</li>
+                        <li>Aspiras, Naisah</li>
+                        <li>Chavez, Neil Gabriel</li>
+                        <li>Ruanes, Alexa Jena</li>
+                        <li>Panganiban, Andrea Loraine</li>
+                        <li>Perez, Jessica Biel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align:center; font-size: 1.3vh">
+            Copyright &copy; 2025 | Mapua University 1st Yr SY. 2024-2025
+        </p>
+    </footer>
+    <!-- Footer section ends -->
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Kambal I Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Outfit:wght@100..900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Outfit", serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            padding: 20px;
+            background-image: url('https://mapua.sgp1.cdn.digitaloceanspaces.com/cms_images/O7AFenu16K6m09rjtoVPsCDK1GLlQdDvgCoF4Ow1.webp');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header h1 {
+            text-align: center;
+            font-size: 4vh;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 20px;
+            font-weight: bold;
+        }
+		
+		/* Navigation Bar Section Styles starts */
+        nav {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding: 5px 10%;
+            background-color: #222;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensure navbar is on top of other elements */
+        }
+        .logo {
+            cursor: pointer;
+            font-size: 25px;
+            margin: 1%;
+            width: 100px;
+            height: 40px;
+            margin-top: 10px;
+            margin-bottom: 10px;    
+        }
+        .logo:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .navLinks {
+            list-style: none;
+        }
+        li, a {
+            font-size: 15px;
+            text-decoration: none;
+            color: white;
+            margin-top: 2%;
+        }
+        .navLinks li {
+            display: inline-block;
+            position: relative; /* Added for dropdown positioning */
+        }
+        .navLinks li a {
+            padding: 0px 9px;
+            transition: all 0.3s ease 0s;
+        }
+        .navLinks li a:hover {
+            color: black;
+            padding: 5px 13px;
+            border-radius: 50px;
+            background-color: #950606;
+            text-decoration: none;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            border-radius: 5%;
+            padding: 10px;
+            white-space: nowrap; /* Ensures text stays in one line */
+            width: auto; /* Auto-adjust width based on content */
+            min-width: 160px; /* Prevents it from being too small */
+        }
+        .navLinks li:hover .dropdown-content {
+            display: block; /* Show dropdown on hover */
+        }
+		
+        .home-section {
+            padding: 5px 10px;
+        }
+        .highlight-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 350px;
+        }
+        @media (max-width: 800px){
+            .highlight-box {
+                font-size: 10px;
+                margin: 20px auto;
+                width: 80%;
+                height: auto;
+            }
+            .highlight-box h3 {
+                font-weight: 600;
+                font-size: 18px;
+            }
+            .highlight-box h5 {
+                font-weight: 600;
+                font-size: 13px;
+            }
+        }
+        .highlight-box h3 {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .featured-lanyards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 50px 10%;
+        }
+        .lanyard-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .lanyard-item img {
+            width: 100%;
+            border-radius: 20px;
+        }
+		@media (max-width: 790px){
+			.lanyard-item img {
+				width: 50%;
+				height: auto;
+			}
+		}
+        .lanyard-item p {
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        p {
+            text-align: center;
+            font-size: 15px;
+            margin-top: 30px;
+        }
+
+        /* Footer Section Styles starts */
+        .footer {
+            background-color: #24262b;
+            padding: 70px 0;
+            width: 100%;
+            justify-content: space-between;
+            padding: 80px;
+            border-radius: 10% 0 0 0;
+            color: white;
+        }
+        .footer ion-icon {
+            color: white;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+        .container {
+            width: 100%;
+            margin: auto;
+            max-width: 100%;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+        .footer-col {
+            width: 30%;
+            padding: 0 15px;
+        }
+        .footer-col h2 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-col h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            width: 50px;
+        }
+        .footer-col ul {
+            padding: 0;
+            list-style: none;
+        }
+        .footer-col ul li {
+            display: block;
+            margin-bottom: 5px;
+            text-align: justify;
+        }
+        .footer-col ul li a {
+            font-size: 15px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover {
+            color: #e91e63;
+        }
+        .footer-col .author {
+            white-space: nowrap;
+        }
+        
+        /* Responsive */
+        @media(max-width: 767px){
+            .footer-col{
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+        @media(max-width: 574px){
+            .footer-col{
+                width: 100%;
+            }
+        }
+        .home-content {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 20px;
+        }
+        .about-section {
+            position: relative;
+            margin: 0px;
+        }
+        .website-image {
+            width: 100%; 
+            height: 200%;
+            border-radius: 10px;
+        }
+        .about-box {
+            position: relative;
+            margin-top: -440px; 
+            left: 10%; 
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px; 
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px; 
+            font-size: 15px; 
+        }
+		@media (max-width: 800px){
+			.about-box {
+                position: center;
+                top: 0; 
+                left: 0; 
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 10px;
+                padding: 20px; 
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                max-width: 400px; 
+                font-size: 10px; 
+                margin: 0 auto;
+            }
+			.website-image {
+				width: 100%; 
+				height: auto;
+				border-radius: 0;
+			}
+			.home-content {
+				display: block;
+				align-items: center;
+				justify-content: space-between;
+				padding: 20px;
+			}
+			.about-section {
+				position: static;
+			}
+			.about-button {
+				display: block;
+				margin-top: 10px;
+				font-size: 10px;
+			}
+		}
+        .about-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #950606;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .about-button:hover {
+            background-color: #7a0505;
+            color: white;
+            text-decoration: none;
+        }
+        .clickable-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 10%;
+        }
+        .clickable-image {
+            position: relative;
+            overflow: hidden; 
+            border-radius: 10px; 
+            transition: transform 0.3s ease; 
+        }
+        .clickable-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; 
+            transition: transform 0.3s ease; 
+        }
+        .clickable-image:hover img {
+            transform: scale(1.1);
+        }
+        .products-home {
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+    
+    <!-- header section starts -->
+    <header>
+        <h1>THE KAMBAL</h1>
+    </header>
+
+    
+    <nav>
+        <img src="images/thekambal_logo.png" class="logo" alt="The Kambal Logo">
+        <ul class="navLinks">
+            <li><a href="index.html">Home</a> | </li>
+            <li>
+                <a href="#">Collections</a> | 
+                <div class="dropdown-content">
+                    <p><a href="page2.html" style="color:black; margin: 5%;">Mapua Centennial Collections</a></p>
+                    <p><a href="page3.html" style="color:black; margin: 5%;">Mapua University Lanyards</a></p>
+                </div>
+            </li>
+            <li><a href="page4.html">Reviews</a> | </li>
+            <li><a href="page5.html">Collaborations</a> | </li>       
+            <li><a href="page6.html">Order Now</a> | </li>              
+            <li><a href="page7.html">FAQs</a></li>
+        </ul>
+    </nav> 
+    <!--header section ends -->
+    
+    <!-- Home section starts -->
+    <section class="about-section">
+        <img src="homelanyards/thekambal.png" alt="Website Image" class="website-image" width="1350px" height="450px" usemap="#website-image">
+        <map name="website-image">
+            <area alt="redlanyard" title="Red Thin Lanyard" href="page2.html" coords="1015,3,1346,447" shape="rect">
+            <area alt="pinklanyard" title="Pink Thin Lanyard" href="page3.html" coords="691,5,1010,448" shape="rect">
+            <area alt="whitelanyard" title="Black Thin Lanyard" href="page4.html" coords="338,1,687,449" shape="rect">
+            <area alt="blacklanyard" title="White Thin Lanyard" href="page5.html" coords="0,4,333,449" shape="rect">
+        </map>
+        <p></p>
+
+        <div class="about-box">
+            <h2>About Us</h2>
+            <h10>The Kambal Lanyards, founded in August 2023, is a small business that sells university lanyards at 
+                Mapua University. Founded by Alexa Jena Ruanes and Andrea Paulene Real, who have been friends since high 
+                school, it offers stylish and high-quality 1-inch and 0.5-inch lanyards. Our mission is to provide Mapua 
+                students with trendy and functional accessories that reflect their university pride. With the help of YouTube 
+                and books, we learned and created our own business, "The Kambal."</h10>
+            <h1></h1>
+            <h10><a href="page2.html" class="about-button">Check Our Products Here!</a></h10>
+        </div>
+    </section>
+
+    <section class="clickable-images">
+        <a href="page2.html" class="clickable-image">
+            <img src="SNimages/shop_now_page1.png" alt="Shop Now 1">
+        </a>
+        <a href="page3.html" class="clickable-image">
+            <img src="SNimages/shop_now_page2.png" alt="Shop Now 2">
+        </a>
+        <a href="page5.html" class="clickable-image">
+            <img src="SNimages/shop_now_page3.png" alt="Shop Now 3">
+        </a>
+    </section>
+
+    <section class="home-section">
+        <h2>Why Choose The Kambal?</h2>
+        <div class="highlight-box">
+            <h3>Quality & Comfort</h3>
+            <h5>Premium and Stylish Design</h5>
+        </div>
+        <div class="highlight-box">
+            <h3>Fast Transactions</h3>
+            <h5>Hassle-free preorders and timely release</h5>
+        </div>
+        <div class="highlight-box">
+            <h3>Worth the Price</h3>
+            <h5>Affordable and Durable Lanyards</h5>
+        </div>
+    </section>
+	<br/><br/><br/>
+	<h2>Featured Lanyards</h2>
+    <section class="featured-lanyards">
+        
+        <div class="lanyard-item">
+            <img src="homelanyards/1.png" alt="Lanyard 1">
+            <p>Price Starts at - ₱150.00</p>
+        </div>
+        <div class="lanyard-item">
+            <img src="homelanyards/2.png" alt="Lanyard 2">
+            <p>Price Starts at - ₱150.00</p>
+        </div>
+        <div class="lanyard-item">
+            <img src="homelanyards/3.png" alt="Lanyard 3">
+            <p>Price Starts at - ₱180.00</p>
+        </div>
+        <div class="lanyard-item">
+            <img src="homelanyards/4.png" alt="Lanyard 4">
+            <p>Price Starts at - ₱180.00</p>
+        </div>
+    </section>
+    <!-- Home section ends -->
+<br/><br/><br/>
+    <!-- Footer section starts -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h2>Kambal</h2>
+                    <ul>
+                        <li>Show off your Mapúan pride with our exclusive lanyards and shirts, designed especially 
+                            for students who live and breathe the cardinal and gold spirit. Whether you're repping your 
+                            department or just want a piece of Mapúa to carry with you, our high-quality merch lets you 
+                            wear your identity with pride.</li>
+                        <li>Made by a fellow Mapúan, for Mapúans—because tradition, excellence, and style go hand in hand. #DugoMapúa</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li><ion-icon name="call"></ion-icon>&nbsp; +63 9664859899</li>
+                        <li><ion-icon name="mail"></ion-icon>&nbsp; thekambal2024@gmail.com</li>
+                        <li><ion-icon name="logo-facebook"></ion-icon>&nbsp; <a href="https://www.facebook.com/">KAMBAL</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h2>Website Authors</h2>
+                    <ul class="author">
+                        <li>ITS121P - AM12</li>
+                        <li>Aspiras, Naisah</li>
+                        <li>Chavez, Neil Gabriel</li>
+                        <li>Ruanes, Alexa Jena</li>
+                        <li>Panganiban, Andrea Loraine</li>
+                        <li>Perez, Jessica Biel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align:center; font-size: 1.3vh">
+            Copyright @2025 | Mapua University 1st Yr SY. 2024-2025
+        </p>
+    </footer>
+    <!-- Footer section ends -->
+    
+</body>
+</html>

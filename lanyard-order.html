@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Kambal Lanyards - Pre-Order Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <style>	
+            @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Outfit:wght@100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: "Outfit", serif;
+            }
+                    /* Banner Section Styles starts */
+            header {
+                padding: 20px;
+            }
+            header h1 {
+                text-align: center;
+                font-size: 4vh;
+                padding: 25px;
+                background-color: rgba(255, 255, 255, 0.7);
+            }	 
+                    
+                   /* Navigation Bar Section Styles starts */
+            nav {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 5px 10%;
+                background-color: #222;
+                width: 100%;
+                position: sticky;
+                top: 0;
+                z-index: 1000; /* Ensure navbar is on top of other elements */
+            }
+            .logo {
+                cursor: pointer;
+                font-size: 25px;
+                margin: 1%;
+                width: 100px;
+                height: 40px;
+                margin-top: 10px;
+                margin-bottom: 10px;    
+            }
+            .logo:hover {
+                transform: scale(1.1);
+                transition: transform 0.3s ease-in-out;
+            }
+            .navLinks {
+                list-style: none;
+            }
+            li, a {
+                font-size: 15px;
+                text-decoration: none;
+                color: white;
+                margin-top: 2%;
+            }
+            .navLinks li {
+                display: inline-block;
+                position: relative; /* Added for dropdown positioning */
+            }
+            .navLinks li a {
+                padding: 0px 9px;
+                transition: all 0.3s ease 0s;
+            }
+            .navLinks li a:hover {
+                color: black;
+                padding: 5px 13px;
+                border-radius: 50px;
+                background-color: #950606;
+                text-decoration: none;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 10;
+                border-radius: 5%;
+                padding: 10px;
+                white-space: nowrap; /* Ensures text stays in one line */
+                width: auto; /* Auto-adjust width based on content */
+                min-width: 160px; /* Prevents it from being too small */
+            }
+            .navLinks li:hover .dropdown-content {
+                display: block; /* Show dropdown on hover */
+            }
+
+            hr {
+                height: 5px;
+                border: none;
+                background-color: black; /* Solid black line */
+                box-shadow: 0 2px 5px rgba(63, 57, 57, 0.75); /* Maroon shadow */
+                border-radius: 5px; /* Slightly rounded edges */
+            }
+		
+            /*for order section*/
+            
+	  .order-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 50px 0;
+          }
+	  .order-form-section {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 1200px;
+         }
+	 .order-form-section h2 {
+            color: #950606;
+            font-weight: bold;
+            margin-top: 25px;
+	    font-size: 40px;
+         }
+
+	form {
+            width: 100%;
+            text-align: left;
+         }
+
+	fieldset {
+            border: 2px solid #950606;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 30px;
+            background-color: #f9f9f9;
+         }
+
+	        legend {
+                font-weight: bold;
+                font-size: 18px;
+                padding: 5px 10px;
+                color: #950606;
+                background-color: #fff;
+                border: 1px solid #333;
+                border-radius: 5px;
+            }
+            input[type="number"] {
+                width: 30%; 
+                padding: 10px;
+                border: 2px solid #950606;
+                border-radius: 5px;
+                font-size: 14px;
+                text-align: center;
+                transition: all 0.3s ease;
+            }
+            @media (max-width: 690px){
+                input[type="number"] {
+                    width: 100%; 
+                    
+                }
+            }
+
+            label {
+                display: block; 
+                font-size: 16px; 
+                margin: 10px 0;
+            }
+
+            button.order-button {
+                background-color: #950606;
+                color: white;
+                font-size: 17px;
+                padding: 12px 25px;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: 0.3s ease-in-out;
+                margin-top: 15px;
+                width: 100%;
+            }
+
+            button.order-button:hover {
+                background-color: black;
+            }
+
+
+            /* Footer Section Styles starts */
+            .footer {
+                background-color: #24262b;
+                padding: 70px 0;
+                width: 100%;
+                justify-content: space-between;
+                padding: 80px;
+                border-radius: 10% 0 0 0;
+                color: white;
+            }
+            .footer ion-icon {
+                color: white;
+                font-size: 20px;
+                vertical-align: middle;
+            }
+            .container {
+                width: 100%;
+                margin: auto;
+                max-width: 100%;
+            }
+            .row {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                text-align: left;
+            }
+            .footer-col {
+                width: 30%;
+                padding: 0 15px;
+            }
+            .footer-col h2 {
+                font-size: 18px;
+                color: #ffffff;
+                text-transform: capitalize;
+                margin-bottom: 35px;
+                font-weight: 500;
+                position: relative;
+            }
+            .footer-col h2::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                background-color: #e91e63;
+                height: 2px;
+                width: 50px;
+            }
+            .footer-col ul {
+                padding: 0;
+                list-style: none;
+            }
+            .footer-col ul li {
+                display: block;
+                margin-bottom: 5px;
+                text-align: justify;
+            }
+            .footer-col ul li a {
+                font-size: 15px;
+                text-decoration: none;
+                color: white;
+                transition: all 0.3s ease;
+            }
+            .footer-col ul li a:hover {
+                color: #e91e63;
+            }
+            .footer-col .author {
+                white-space: nowrap;
+            }
+            
+            /* Responsive */
+            @media(max-width: 767px){
+                .footer-col{
+                    width: 50%;
+                    margin-bottom: 30px;
+                }
+            }
+            @media(max-width: 574px){
+                .footer-col{
+                    width: 100%;
+                }
+            }
+            .footer ion-icon{
+                color: white;
+                font-size: 20px;
+                align-items: center;
+                justify-content: center;			
+            }
+
+    </style>
+
+<script>
+        function confirmOrder(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            alert("Thank you for your order! Your request has been received.");
+            document.getElementById("orderForm").reset(); // Reset form fields
+        }
+    </script>
+</head>
+ <body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+        
+        <!-- header section starts -->
+        <header style="background-image: url('https://mapua.sgp1.cdn.digitaloceanspaces.com/cms_images/O7AFenu16K6m09rjtoVPsCDK1GLlQdDvgCoF4Ow1.webp'); background-position: center; background-repeat: no-repeat; background-size: cover">
+            <h1 style="letter-spacing: 20px; font-weight:bold">THE  KAMBAL</h1>
+        </header>
+        
+        <nav>
+            <img src="images/thekambal_logo.png" class="logo" alt="The Kambal Logo">
+            <ul class="navLinks">
+                <li><a href="index.html">Home</a> | </li>
+                <li>
+                    <a href="#">Collections</a> | 
+                    <div class="dropdown-content">
+                        <p><a href="page2.html" style="color:black; margin: 5%;">Mapua Centennial Collections</a></p>
+                        <p><a href="page3.html" style="color:black; margin: 5%;">Mapua University Lanyards</a></p>
+                    </div>
+                </li>
+                <li><a href="page4.html">Reviews</a> | </li>
+                <li><a href="page5.html">Collaborations</a> | </li>       
+                <li><a href="page6.html">Order Now</a> | </li>              
+                <li><a href="page7.html">FAQs</a></li>
+            </ul>
+        </nav> 
+        <br><br> 
+        <!--header section ends -->
+	<!-- order section starts -->
+	
+   
+<div class="order-container">
+<section class="order-form-section">
+    <h2>Select Your Lanyard</h2>
+    <p style="font-size: 20px; color: black; margin-bottom: 30px; letter-spacing: 2px;">Find the perfect lanyard to match your style and school spirit!</p>
+ <form id="orderForm" method="post" action="mailto:thekambal2024@gmail.com">
+    <!-- Black & Red Mapúa Lanyards -->
+    <fieldset>
+        <legend>Black & Red Mapúa Lanyards</legend>
+       
+            <label>
+                <input type="checkbox" name="lanyard[]" value="Black Mapúa Lanyard"> Black Mapúa Lanyard
+            </label>
+            <input type="number" name="quantity_Black_Mapua" min="1" max="10" placeholder="Qty">
+
+            <label>
+                <input type="checkbox" name="lanyard[]" value="Red Mapúa Lanyard"> Red Mapúa Lanyard
+            </label>
+            <input type="number" name="quantity_Red_Mapua" min="1" max="10" placeholder="Qty">
+        
+    </fieldset>
+
+    <!-- Thin Black & White Viva Mapúa Lanyards (CE, ARCHI, EE, CPE) -->
+    <fieldset>
+        <legend>Thin Black & White Viva Mapúa Lanyards</legend>
+        
+            <label>
+                <input type="checkbox" name="lanyard[]" value="Thin Black - CE"> Thin Black - CE
+            </label>
+            <input type="number" name="quantity_Thin_Black_CE" min="1" max="10" placeholder="Qty">
+
+            <label>
+                <input type="checkbox" name="lanyard[]" value="Thin White - CE"> Thin White - CE
+            </label>
+            <input type="number" name="quantity_Thin_White_CE" min="1" max="10" placeholder="Qty">
+
+            <label>
+                <input type="checkbox" name="lanyard[]" value="Thin Black - ARCHI"> Thin Black - ARCHI
+            </label>
+            <input type="number" name="quantity_Thin_Black_ARCHI" min="1" max="10" placeholder="Qty">
+
+            <label>
+                <input type="checkbox" name="lanyard[]" value="Thin White - ARCHI"> Thin White - ARCHI
+            </label>
+            <input type="number" name="quantity_Thin_White_ARCHI" min="1" max="10" placeholder="Qty">
+
+            <label>
+                <input type="checkbox" name="lanyard[]" value="Thin Black - EE"> Thin Black - EE
+            </label>
+            <input type="number" name="quantity_Thin_Black_EE" min="1" max="10" placeholder="Qty">
+
+            <label>
+                <input type="checkbox" name="lanyard[]" value="Thin White - EE"> Thin White - EE
+            </label>
+            <input type="number" name="quantity_Thin_White_EE" min="1" max="10" placeholder="Qty">
+
+            <label>
+                <input type="checkbox" name="lanyard[]" value="Thin Black - CPE"> Thin Black - CPE
+            </label>
+            <input type="number" name="quantity_Thin_Black_CPE" min="1" max="10" placeholder="Qty">
+
+            <label>
+                <input type="checkbox" name="lanyard[]" value="Thin White - CPE"> Thin White - CPE
+            </label>
+            <input type="number" name="quantity_Thin_White_CPE" min="1" max="10" placeholder="Qty">
+        
+    </fieldset>
+
+  
+
+    <!-- Mapúa@100 Lanyards -->
+    <fieldset>
+        <legend>Mapúa@100 Lanyards</legend>
+	
+        <label>
+            <input type="checkbox" name="lanyard[]" value="Thin Red Mapúa@100 Lanyard"> Thin Red Mapúa@100 Lanyard
+        </label>
+        <input type="number" name="quantity_Thin_Red_Mapua100" min="1" max="10" placeholder="Qty">
+
+        <label>
+            <input type="checkbox" name="lanyard[]" value="Thin Pink Mapúa@100 Lanyard"> Thin Pink Mapúa@100 Lanyard
+        </label>
+        <input type="number" name="quantity_Thin_Pink_Mapua100" min="1" max="10" placeholder="Qty">
+	
+    </fieldset>
+
+    <!-- Navy Blue & Black SOIT Lanyards -->
+    <fieldset>
+        <legend>Navy Blue & Black SOIT Lanyards</legend>
+        
+
+        <label>
+            <input type="checkbox" name="lanyard[]" value="Black SOIT Lanyard"> Black SOIT Lanyard
+        </label>
+        <input type="number" name="quantity_Black_SOIT" min="1" max="10" placeholder="Qty">
+
+        <label>
+            <input type="checkbox" name="lanyard[]" value="Navy Blue SOIT Lanyard"> Navy Blue SOIT Lanyard
+        </label>
+        <input type="number" name="quantity_Navy_Blue_SOIT" min="1" max="10" placeholder="Qty">
+	
+    </fieldset>
+
+    <!-- Thin Black & White Viva Mapúa Lanyards (IT, BUSINESS, MEDIA STUDIES) -->
+    <fieldset>
+        <legend>Thin Black & White Viva Mapúa Lanyards (IT, BUSINESS, MEDIA STUDIES)</legend>
+       	
+
+        <label>
+            <input type="checkbox" name="lanyard[]" value="Thin Black - IT"> Thin Black - IT
+        </label>
+        <input type="number" name="quantity_Thin_Black_IT" min="1" max="10" placeholder="Qty">
+
+        <label>
+            <input type="checkbox" name="lanyard[]" value="Thin White - IT"> Thin White - IT
+        </label>
+        <input type="number" name="quantity_Thin_White_IT" min="1" max="10" placeholder="Qty">
+
+        <label>
+            <input type="checkbox" name="lanyard[]" value="Thin Black - BUSINESS"> Thin Black - BUSINESS
+        </label>
+        <input type="number" name="quantity_Thin_Black_BUSINESS" min="1" max="10" placeholder="Qty">
+
+        <label>
+            <input type="checkbox" name="lanyard[]" value="Thin White - BUSINESS"> Thin White - BUSINESS
+        </label>
+        <input type="number" name="quantity_Thin_White_BUSINESS" min="1" max="10" placeholder="Qty">
+
+        <label>
+            <input type="checkbox" name="lanyard[]" value="Thin Black - MEDIA STUDIES"> Thin Black - MEDIA STUDIES
+        </label>
+        <input type="number" name="quantity_Thin_Black_MEDIA_STUDIES" min="1" max="10" placeholder="Qty">
+
+        <label>
+            <input type="checkbox" name="lanyard[]" value="Thin White - MEDIA STUDIES"> Thin White - MEDIA STUDIES
+        </label>
+        <input type="number" name="quantity_Thin_White_MEDIA_STUDIES" min="1" max="10" placeholder="Qty">
+	
+    </fieldset>
+
+    <!-- Submit Button -->
+        <br/><br/>
+	
+                <button type="submit" class="order-button">Place Order</button>
+                <br/><br/><br/>
+
+       
+</form>
+</section> 
+</div>
+     <!--order section ends -->
+        <br/><br/><br/>
+        <!-- Footer section starts -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h2>Kambal</h2>
+                        <ul>
+                            <li>Show off your Mapúan pride with our exclusive lanyards and shirts, designed especially for students who live and breathe the cardinal and gold spirit. Whether you're repping your department or just want a piece of Mapúa to carry with you, our high-quality merch lets you wear your identity with pride.</li>
+                            <li>Made by a fellow Mapúan, for Mapúans—because tradition, excellence, and style go hand in hand. #DugoMapúa</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h2>Contact Us</h2>
+                        <ul>
+                            <li><ion-icon name="call"></ion-icon>&nbsp; +63 9664859899</li>
+                            <li><ion-icon name="mail"></ion-icon>&nbsp; thekambal2024@gmail.com</li>
+                            <li><ion-icon name="logo-facebook"></ion-icon>&nbsp; <a href="https://www.facebook.com/">KAMBAL</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h2>Website Authors</h2>
+                        <ul class="author">
+                            <li>ITS121P - AM12</li>
+                            <li>Aspiras, Naisah</li>
+                            <li>Chavez, Neil Gabriel</li>
+                            <li>Ruanes, Alexa Jena</li>
+                            <li>Panganiban, Andrea Loraine</li>
+                            <li>Perez, Jessica Biel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <p style="text-align:center; font-size: 1.3vh">
+                Copyright &copy; 2025 | Mapua University 1st Yr SY. 2024-2025
+            </p>
+        </footer>
+        <!-- Footer section ends -->
+         </body>
+
+    </html>

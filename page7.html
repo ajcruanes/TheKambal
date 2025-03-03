@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Kambal I FAQS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <style>	
+            @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Outfit:wght@100..900&display=swap');
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: "Outfit", serif;
+            }
+            body {
+				overflow-x: hidden;
+			}
+                    /* Banner Section Styles starts */
+            header {
+                padding: 20px;
+            }
+            header h1 {
+                text-align: center;
+                font-size: 4vh;
+                padding: 25px;
+                background-color: rgba(255, 255, 255, 0.7);
+            }	 
+                    
+                    /* Navigation Bar Section Styles starts */
+            nav {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 5px 10%;
+                background-color: #222;
+                width: 100%;
+                position: sticky;
+                top: 0;
+                z-index: 1000; /* Ensure navbar is on top of other elements */
+            }
+            .logo {
+                cursor: pointer;
+                font-size: 25px;
+                margin: 1%;
+                width: 100px;
+                height: 40px;
+                margin-top: 10px;
+                margin-bottom: 10px;    
+            }
+            .logo:hover {
+                transform: scale(1.1);
+                transition: transform 0.3s ease-in-out;
+            }
+            .navLinks {
+                list-style: none;
+            }
+            li, a {
+                font-size: 15px;
+                text-decoration: none;
+                color: white;
+                margin-top: 2%;
+            }
+            .navLinks li {
+                display: inline-block;
+                position: relative; /* Added for dropdown positioning */
+            }
+            .navLinks li a {
+                padding: 0px 9px;
+                transition: all 0.3s ease 0s;
+            }
+            .navLinks li a:hover {
+                color: black;
+                padding: 5px 13px;
+                border-radius: 50px;
+                background-color: #950606;
+                text-decoration: none;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                z-index: 10;
+                border-radius: 5%;
+                padding: 10px;
+                white-space: nowrap; /* Ensures text stays in one line */
+                width: auto; /* Auto-adjust width based on content */
+                min-width: 160px; /* Prevents it from being too small */
+            }
+            .navLinks li:hover .dropdown-content {
+                display: block; /* Show dropdown on hover */
+            }
+
+            hr {
+                height: 5px;
+                border: none;
+                background-color: black; /* Solid black line */
+                box-shadow: 0 2px 5px rgba(63, 57, 57, 0.75); /* Maroon shadow */
+                border-radius: 5px; /* Slightly rounded edges */
+            }
+
+                /* Home Section Styles starts */
+      
+            .home-section {
+                background-color: #f3f2ed;
+                color: #ffffff; 
+                padding: 12% 0;
+                text-align: center;
+                height: 80%;
+                display: flex; /* Use flexbox to center the content vertically */
+                justify-content: center; /* Center horizontally */
+                align-items: center; /* Center vertically */
+                flex-direction: column;
+                margin: 0;
+            }	  
+            .home-section .row{
+                margin: 20px;
+            }
+            .home-section h2 {
+                font-size: 40px; 
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for emphasis */
+                font-weight: bold;
+                margin: 20px;
+                text-align: center;
+            }	  
+            .home-section p {
+                font-weight: bold;
+                margin: 20px;
+                max-width: 900px;
+                align-items: center;
+            }	  
+            .home-section img {
+                max-width: 100%;
+                height: auto;
+                filter: invert(10%) sepia(80%) saturate(300%) hue-rotate(350deg) brightness(1) contrast(1.5);
+                align-items: center;
+            }
+                
+                /* FAQs Section Styles starts */
+                
+            .card {
+                border: none;
+                margin: 20px auto; /* Center the cards horizontally with auto margin */
+                background-color: #ccc; /* Change background color to gray */
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+                transition: box-shadow 0.3s ease; 
+                max-width: 80%;
+            }	  
+            .card:hover{
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+            }	  
+            .card-header {
+                background-color: #ccc; /* Change background color to gray */
+            }
+            .card-header button {
+                font-size: 17px;
+                font-weight: bold;
+                color: #000; /* Dark text color */
+                padding: 20px auto;
+                width: 100%;
+                text-align: left;
+            }	  
+            .card-body{
+                font-size: 16px;
+                color: black;
+                padding: 20px;
+                margin-left: 4%;
+            }
+                
+            /* Footer Section Styles starts */
+
+            .footer {
+                background-color: #24262b;
+                padding: 70px 0;
+                width: 100%;
+                justify-content: space-between;
+                padding: 80px;
+                border-radius: 10% 0 0 0;
+                color: white;
+            }
+            .footer ion-icon {
+                color: white;
+                font-size: 20px;
+                vertical-align: middle;
+            }
+            .container {
+                width: 100%;
+                margin: auto;
+                max-width: 100%;
+            }
+            .row {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                text-align: left;
+            }
+            .footer-col {
+                width: 30%;
+                padding: 0 15px;
+            }
+            .footer-col h2 {
+                font-size: 18px;
+                color: #ffffff;
+                text-transform: capitalize;
+                margin-bottom: 35px;
+                font-weight: 500;
+                position: relative;
+            }
+            .footer-col h2::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                background-color: #e91e63;
+                height: 2px;
+                width: 50px;
+            }
+            .footer-col ul {
+                padding: 0;
+                list-style: none;
+            }
+            .footer-col ul li {
+                display: block;
+                margin-bottom: 5px;
+                text-align: justify;
+            }
+            .footer-col ul li a {
+                font-size: 15px;
+                text-decoration: none;
+                color: white;
+                transition: all 0.3s ease;
+            }
+            .footer-col ul li a:hover {
+                color: #e91e63;
+            }
+            .footer-col .author {
+                white-space: nowrap;
+            }
+            
+            /* Responsive */
+            @media(max-width: 767px){
+                .footer-col{
+                    width: 50%;
+                    margin-bottom: 30px;
+                }
+            }
+            @media(max-width: 574px){
+                .footer-col{
+                    width: 100%;
+                }
+            }
+            p {
+                text-align: center;
+                font-size: 1.3vh;
+                margin-top: 30px;
+            }
+            .footer ion-icon{
+                color: white;
+                font-size: 20px;
+                align-items: center;
+                justify-content: center;			
+            }
+
+    </style>
+
+    <body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+        
+        <!-- header section starts -->
+        <header style="background-image: url('https://mapua.sgp1.cdn.digitaloceanspaces.com/cms_images/O7AFenu16K6m09rjtoVPsCDK1GLlQdDvgCoF4Ow1.webp'); background-position: center; background-repeat: no-repeat; background-size: cover">
+            <h1 style="letter-spacing: 20px; font-weight:bold">THE  KAMBAL</h1>
+        </header>
+        
+        <nav>
+            <img src="images/thekambal_logo.png" class="logo" alt="The Kambal Logo">
+            <ul class="navLinks">
+                <li><a href="index.html">Home</a> | </li>
+                <li>
+                    <div class="dropdown">
+                        <span>&nbsp; Collections &nbsp; |</span>  
+                        <div class="dropdown-content">
+                            <p><a href="page2.html" style="color:black; margin: 5%;">Mapua Centennial Collections &nbsp;&nbsp;</a></p>
+                            <p><a href="page3.html" style="color:black; margin: 5%;">Mapua University Lanyards</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="page4.html">Reviews</a> | </li>
+                <li><a href="page5.html">Collaborations</a> | </li>       
+                <li><a href="page6.html">Order Now</a> | </li>              
+                <li><a href="page7.html">FAQs</a></li>
+            </ul>
+        </nav>
+        <!--header section ends -->
+        
+        <!-------- Home section starts -------->
+    
+		<section class="home-section" id="home-section">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>Frequently Asked <span style="color: #A52A2A;">Questions</span></h2>
+					<center><p style="font-size: 26px; color: black">Discover high-quality and stylish lanyards! Find answers to common questions about our products, ordering process, and more below.</p>
+				</div></center>
+				<br/><br/><br/>
+				<div class="col-md-6">
+					<img src="https://geccu.com/wp-content/uploads/2019/11/faq-1-1.png"  >
+				</div>		
+			</div>
+		</section>
+    
+	<!-------- Home section ends -------->
+	<br/><br/><br/>
+    <!-------- FAQs section starts -------->
+		<section id="frequent-questions">
+			<div class="accordion" id="faqAccordion">
+				
+				<!-- FAQ Item 1 -->
+				<div class="card">
+					<div class="card-header" id="faqHeading1">
+						<h3 class="mb-0">
+						 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                            What types of lanyards do you sell?
+						 </button>
+					  </h3>
+					</div>
+					<div id="faqCollapse1" class="collapse" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
+						<div class="card-body">
+							We sell pre-designed lanyards featuring Mapua University themes. Our designs are stylish, durable, and perfect for students.
+						</div>
+					</div>
+				</div>
+				
+				<!-- FAQ Item 2 -->
+				<div class="card">
+					<div class="card-header" id="faqHeading2">
+						<h3 class="mb-0">
+						 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                            How can I place an order?
+						 </button>
+					  </h3>
+					</div>
+					<div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
+						<div class="card-body">
+							You can order directly through our website by selecting your preferred lanyard design and checking out or you can reach out to our contact persons
+                            <ul>
+								<li  style="font-size: 1.5vh; color:black; margin-left: 4%">Andrea Real (Intramuros Campus)</li>
+                                <li  style="font-size: 1.5vh; color:black; margin-left: 4%">Jena Ruanes (Makati Campus)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<!-- FAQ Item 3 -->
+				<div class="card">
+					<div class="card-header" id="faqHeading3">
+						<h3 class="mb-0">
+						 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                            What payment methods do you accept?
+						 </button>
+					  </h3>
+					</div>
+					<div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
+						<div class="card-body">
+							We accept GCash and cash. Payment must be made first before we confirm your order.
+						</div>
+					</div>
+				</div>
+				
+				<!-- FAQ Item 4 -->
+				<div class="card">
+					<div class="card-header" id="faqHeading4">
+						<h3 class="mb-0">
+						 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                            Where can I pick up my order? Do you offer shipping?
+						 </button>
+					  </h3>
+					</div>
+					<div id="faqCollapse4" class="collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
+						<div class="card-body">
+							Pickup locations are inside Mapua University – Makati Campus. We will notify you of the exact location.
+						</div>
+                        <div class="card-body">
+							Currently, we only offer in-campus pickup and meetups.
+						</div>
+					</div>
+				</div>
+				
+				<!-- FAQ Item 5 -->
+				<div class="card">
+					<div class="card-header" id="faqHeading5">
+						<h3 class="mb-0">
+						 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                            Are the lanyards water-resistant?
+						 </button>
+					  </h3>
+					</div>
+					<div id="faqCollapse5" class="collapse" aria-labelledby="faqHeading5" data-parent="#faqAccordion">
+						<div class="card-body">
+							Yes! Our lanyards are designed to withstand daily use, including exposure to water and sweat. However, we recommend air-drying them if they get wet to maintain their quality.
+						</div>
+					</div>
+				</div>
+		</section>
+		
+        <!-------- FAQs section ends -------->
+        <br/><br/><br/>
+        <!-- Footer section starts -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h2>Kambal</h2>
+                        <ul>
+                            <li>Show off your Mapúan pride with our exclusive lanyards and shirts, designed especially for students who live and breathe the cardinal and gold spirit. Whether you're repping your department or just want a piece of Mapúa to carry with you, our high-quality merch lets you wear your identity with pride.</li>
+                            <li>Made by a fellow Mapúan, for Mapúans—because tradition, excellence, and style go hand in hand. #DugoMapúa</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h2>Contact Us</h2>
+                        <ul>
+                            <li><ion-icon name="call"></ion-icon>&nbsp; +63 9664859899</li>
+                            <li><ion-icon name="mail"></ion-icon>&nbsp; thekambal2024@gmail.com</li>
+                            <li><ion-icon name="logo-facebook"></ion-icon>&nbsp; <a href="https://www.facebook.com/">KAMBAL</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h2>Website Authors</h2>
+                        <ul class="author">
+                            <li>ITS121P - AM12</li>
+                            <li>Aspiras, Naisah</li>
+                            <li>Chavez, Neil Gabriel</li>
+                            <li>Ruanes, Alexa Jena</li>
+                            <li>Panganiban, Andrea Loraine</li>
+                            <li>Perez, Jessica Biel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <p style="text-align:center; font-size: 1.3vh">
+                Copyright &copy; 2025 | Mapua University 1st Yr SY. 2024-2025
+            </p>
+        </footer>
+        <!-- Footer section ends -->
+        
+    </body>
+</html>
